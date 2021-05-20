@@ -5,7 +5,7 @@ const Rain = () => {
   return (
     <div className="rain-wrapper">
       <WeatherInformation
-        location="Melbounre"
+        location="Melbourne"
         temperature="14"
         conditions="Rainy"
       />

@@ -4,8 +4,8 @@ const WeatherInformation = ({ location, temperature, conditions }) => {
   return (
     <div className="weather-info-wrapper">
       <h2>
-        The weather in {location} is currently {temperature} with {conditions}{" "}
-        conditions{" "}
+        The weather in {location} is currently {temperature} with {conditions} {""}
+        conditions.
       </h2>
     </div>
   );

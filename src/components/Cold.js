@@ -5,7 +5,7 @@ const Cold = () => {
   return (
     <div className="cold-wrapper">
       <WeatherInformation
-        location="Melbounre"
+        location="Melbourne"
         temperature="20"
         conditions="Cold"
       />
