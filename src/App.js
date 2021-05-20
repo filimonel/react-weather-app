@@ -1,9 +1,11 @@
 import "./styles/App.scss";
-import Banner from "./components/Banner";
+import HeroPage from "./components/HeroPage";
 import Cold from "./components/Cold";
+import Hot from "./components/Hot";
+import Rain from "./components/Rain";
 
 function App() {
-  return <Cold />;
+  return <Rain />;
 }
 
 export default App;
