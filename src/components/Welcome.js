@@ -1,9 +1,13 @@
-const Welcome = () => {
-    return (
-        <div className='welcome-text'>
-            
-        </div>
-    )
-}
+import moment from "moment";
+import './../styles/Welcome.scss'
 
-export default Welcome
+const Welcome = () => {
+  return (
+    <div className="welcome-text">
+      <h1>Welcome.</h1>
+      <p></p>
+    </div>
+  );
+};
+
+export default Welcome;

@@ -1,6 +1,9 @@
 .Banner {
   height: 100vh;
   width: 100%;
-  background-image: url('./images/nature.jpg');
+  background-image: url("./images/nature.jpg");
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
