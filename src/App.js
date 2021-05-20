@@ -1,10 +1,8 @@
 import "./styles/App.scss";
-import "./components/Banner"
+import Banner from "./components/Banner";
 
 function App() {
-  return (
-      <Banner />
-  )
+  return <Banner />;
 }
 
 export default App;
