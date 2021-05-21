@@ -10,6 +10,11 @@ import Perfect from "./components/Perfect";
 function App() {
   const [city, setCity] = useState("");
 
+  // Fetch Weather Information
+  const fetchWeather = () => {
+    
+  }
+
   return (
       <HeroPage searchCity={(city) => setCity(city)} />
   );
