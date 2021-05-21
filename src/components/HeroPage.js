@@ -1,7 +1,7 @@
 import "./../styles/HeroPage.scss";
 import "./../styles/WelcomeTxt.scss";
 import "./../styles/Form.scss";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const HeroPage = ({ searchCity }) => {
   const [city, setCity] = useState("");
