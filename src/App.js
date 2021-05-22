@@ -8,10 +8,12 @@ import Hot from "./components/Hot";
 // import Perfect from "./components/Perfect";
 
 function App() {
-  const [city, setCity] = useState("Sydney");
+  // State
+  const [city, setCity] = useState("Melbourne");
   const [name, setName] = useState("");
   const [temp, setTemp] = useState();
   const [conditions, setConditions] = useState("");
+  const [path, setPath] = useState("/")
 
   // Fetch Weather Information
   useEffect(() => {
@@ -26,23 +28,36 @@ function App() {
       setTemp(Math.round(result["main"]["temp"]));
       setConditions(result["weather"][0]["description"]);
     };
-
-    fetchData();
+    // fetchData();
   }, [city]);
 
-  return (
-    <Router>
-      {}
-      <Route path="/" exact render={() => (
-        <HeroPage searchCity={(city) => setCity(city)} />
-      )}/>
-      
-      <Route path="/hot" exact render={() => (
-        <Hot location={name} temperature={temp} conditions={conditions}/>
-      )}/>
-    </Router>
+  // Route to weather pages
 
+  const handleClick = () => {
+    //
+  }
+
+  return (
     
+    <Router>
+      {city === "Melbourne" && (
+        <Route
+          path={path}
+          exact
+          render={() => <HeroPage searchCity={(city) => setCity(city)} />}
+        />
+      )}
+
+      {/* {temp > 30 && ( */}
+        <Route
+          path="/hot"
+          exact
+          render={() => (
+            <Hot location={name} temperature={temp} conditions={conditions} />
+          )}
+        />
+      {/* )} */}
+    </Router>
   );
 }
 
