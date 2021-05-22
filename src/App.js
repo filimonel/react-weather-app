@@ -30,12 +30,12 @@ function App() {
       setTemp(temp);
       setConditions(conditions);
 
-      if(temp >= 30) {
-        setClassName("hot-wrapper")
-        setPath("/hot")
+      if (temp >= 30) {
+        setClassName("hot-wrapper");
+        setPath("/hot");
       }
     };
-    // fetchData();
+    fetchData();
   }, [city]);
 
   return (
