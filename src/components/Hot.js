@@ -1,13 +1,13 @@
 import "./../styles/Hot.scss";
 import WeatherInformation from "./WeatherInformation";
 
-const Hot = () => {
+const Hot = ({ location, temperature, conditions }) => {
   return (
     <div className="hot-wrapper">
       <WeatherInformation
-        location="Melbourne"
-        temperature="36"
-        conditions="Hot"
+        location={location}
+        temperature={temperature}
+        conditions={conditions}
       />
     </div>
   );
