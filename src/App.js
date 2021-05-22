@@ -1,11 +1,8 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import HeroPage from "./components/HeroPage";
+import WeatherPage from "./components/WeatherPage";
 import env from "react-dotenv";
-// import Cold from "./components/Cold";
-import Hot from "./components/Hot";
-// import Rain from "./components/Rain";
-// import Perfect from "./components/Perfect";
 
 function App() {
   // State
@@ -13,7 +10,7 @@ function App() {
   const [name, setName] = useState("");
   const [temp, setTemp] = useState();
   const [conditions, setConditions] = useState("");
-  const [path, setPath] = useState("/")
+  const [path, setPath] = useState("/");
 
   // Fetch Weather Information
   useEffect(() => {
@@ -31,14 +28,7 @@ function App() {
     // fetchData();
   }, [city]);
 
-  // Route to weather pages
-
-  const handleClick = () => {
-    //
-  }
-
   return (
-    
     <Router>
       {city === "Melbourne" && (
         <Route
@@ -49,13 +39,18 @@ function App() {
       )}
 
       {/* {temp > 30 && ( */}
-        <Route
-          path="/hot"
-          exact
-          render={() => (
-            <Hot location={name} temperature={temp} conditions={conditions} />
-          )}
-        />
+      <Route
+        path="/hot"
+        exact
+        render={() => (
+          <WeatherPage
+            className="perfect-wrapper"
+            location={name}
+            temperature={temp}
+            conditions={conditions}
+          />
+        )}
+      />
       {/* )} */}
     </Router>
   );

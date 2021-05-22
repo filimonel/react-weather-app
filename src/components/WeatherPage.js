@@ -1,10 +1,13 @@
 import "./../styles/Hot.scss";
+import "./../styles/Cold.scss";
+import "./../styles/Rain.scss";
+import "./../styles/Perfect.scss";
 import { Link } from "react-router-dom";
 import WeatherInformation from "./WeatherInformation";
 
-const Hot = ({ location, temperature, conditions }) => {
+const WeatherPage = ({ className, location, temperature, conditions }) => {
   return (
-    <div className="hot-wrapper">
+    <div className={className}>
       <WeatherInformation
         location={location}
         temperature={temperature}
@@ -15,4 +18,4 @@ const Hot = ({ location, temperature, conditions }) => {
   );
 };
 
-export default Hot;
+export default WeatherPage;
