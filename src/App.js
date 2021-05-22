@@ -6,11 +6,12 @@ import env from "react-dotenv";
 
 function App() {
   // State
-  const [city, setCity] = useState("Melbourne");
+  const [city, setCity] = useState("Dhaka");
   const [name, setName] = useState("");
   const [temp, setTemp] = useState();
   const [conditions, setConditions] = useState("");
   const [path, setPath] = useState("/");
+  const [className, setClassName] = useState("");
 
   // Fetch Weather Information
   useEffect(() => {
@@ -21,9 +22,18 @@ function App() {
       const result = await res.json();
 
       console.log(result);
-      setName(result["name"]);
-      setTemp(Math.round(result["main"]["temp"]));
-      setConditions(result["weather"][0]["description"]);
+      const name = result["name"];
+      const temp = Math.round(result["main"]["temp"]);
+      const conditions = result["weather"][0]["description"];
+
+      setName(name);
+      setTemp(temp);
+      setConditions(conditions);
+
+      if(temp >= 30) {
+        setClassName("hot-wrapper")
+        setPath("/hot")
+      }
     };
     // fetchData();
   }, [city]);
@@ -32,26 +42,24 @@ function App() {
     <Router>
       {city === "Melbourne" && (
         <Route
-          path={path}
+          path="/"
           exact
           render={() => <HeroPage searchCity={(city) => setCity(city)} />}
         />
       )}
 
-      {/* {temp > 30 && ( */}
       <Route
-        path="/hot"
+        path={path}
         exact
         render={() => (
           <WeatherPage
-            className="perfect-wrapper"
+            className={className}
             location={name}
             temperature={temp}
             conditions={conditions}
           />
         )}
       />
-      {/* )} */}
     </Router>
   );
 }
