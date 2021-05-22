@@ -1,4 +1,5 @@
 import "./../styles/Hot.scss";
+import { Link } from "react-router-dom";
 import WeatherInformation from "./WeatherInformation";
 
 const Hot = ({ location, temperature, conditions }) => {
@@ -9,6 +10,7 @@ const Hot = ({ location, temperature, conditions }) => {
         temperature={temperature}
         conditions={conditions}
       />
+      <Link to="/">Back</Link>
     </div>
   );
 };

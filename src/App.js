@@ -32,10 +32,10 @@ function App() {
 
   return (
     <Router>
+      {}
       <Route path="/" exact render={() => (
         <HeroPage searchCity={(city) => setCity(city)} />
       )}/>
-      
       
       <Route path="/hot" exact render={() => (
         <Hot location={name} temperature={temp} conditions={conditions}/>
