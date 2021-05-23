@@ -13,7 +13,7 @@ const WeatherPage = ({ className, location, temperature, conditions }) => {
         temperature={temperature}
         conditions={conditions}
       />
-      <Link to="/">Back</Link>
+      <Link to="/" >Back</Link>
     </div>
   );
 };
