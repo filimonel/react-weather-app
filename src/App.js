@@ -6,7 +6,7 @@ import env from "react-dotenv";
 
 function App() {
   // State
-  const [city, setCity] = useState("Melbourne");
+  const [city, setCity] = useState("galway");
   const [name, setName] = useState("");
   const [temp, setTemp] = useState();
   const [conditions, setConditions] = useState("");
@@ -30,7 +30,7 @@ function App() {
       setTemp(temp);
       setConditions(conditions);
 
-      if (conditions.includes('rain')) {
+      if (conditions.toLowerCase().includes('rain')) {
         setClassName("rain-wrapper");
       }
 
@@ -47,9 +47,11 @@ function App() {
         default:
           break
       }
+
+      console.log(className)
     };
     fetchData();
-  }, [city]);
+  }, [city, className]);
 
   return (
     <Router>
