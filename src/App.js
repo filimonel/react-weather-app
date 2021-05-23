@@ -6,11 +6,11 @@ import env from "react-dotenv";
 
 function App() {
   // State
-  const [city, setCity] = useState("Dhaka");
+  const [city, setCity] = useState("Melbourne");
   const [name, setName] = useState("");
   const [temp, setTemp] = useState();
   const [conditions, setConditions] = useState("");
-  const [path, setPath] = useState("/");
+  const [path, setPath] = useState("/weather");
   const [className, setClassName] = useState("");
 
   // Fetch Weather Information
@@ -30,9 +30,22 @@ function App() {
       setTemp(temp);
       setConditions(conditions);
 
-      if (temp >= 30) {
-        setClassName("hot-wrapper");
-        setPath("/hot");
+      if (conditions.includes('rain')) {
+        setClassName("rain-wrapper");
+      }
+
+      switch(temp) {
+        case temp >= 30:
+          setClassName("hot-wrapper");
+          break;
+        case temp >= 20 && temp < 30:
+          setClassName("perfect-wrapper");
+          break;
+        case temp < 10:
+          setClassName("cold-wrapper");
+          break;
+        default:
+          break
       }
     };
     fetchData();
