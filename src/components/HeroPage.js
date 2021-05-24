@@ -2,10 +2,11 @@ import "./../styles/HeroPage.scss";
 import "./../styles/WelcomeTxt.scss";
 import "./../styles/Form.scss";
 import { useState } from "react";
+import { Redirect } from "react-router-dom";
 
 const HeroPage = ({ searchCity }) => {
   const [city, setCity] = useState("");
-    
+  
   // Input Validation & Passing data to parent
   const onSubmit = (e) => {
     e.preventDefault();
@@ -20,6 +21,7 @@ const HeroPage = ({ searchCity }) => {
 
     // Return to default placeholder
     setCity("");
+
   };
 
   return (

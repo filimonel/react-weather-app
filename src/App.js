@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import HeroPage from "./components/HeroPage";
 import WeatherPage from "./components/WeatherPage";
 import env from "react-dotenv";
@@ -38,20 +38,20 @@ function App() {
       if(temp >= 20 && temp < 30) setClassName('perfect-wrapper')
       if(temp > 30) setClassName('hot-wrapper')  
 
-      console.log(temp)
+      console.log('once')
     };
     fetchData();
   }, [city, className]);
 
   return (
     <Router>
-      {city === "Melbourne" && (
+      {city === "Melbourne" ? (
         <Route
           path="/"
           exact
-          render={() => <HeroPage searchCity={(city) => setCity(city)} />}
+          render={() => <HeroPage searchCity={(city) => setCity(city)} /> }
         />
-      )}
+      ) : <Redirect to='/weather' /> }
 
       <Route
         path={path}
