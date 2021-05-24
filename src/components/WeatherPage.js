@@ -19,7 +19,7 @@ const WeatherPage = ({
         temperature={temperature}
         conditions={conditions}
       />
-      <Link to="/" onClick={() => homePath(path)}>
+      <Link className="back-button" to="/" onClick={() => homePath(path)}>
         Back
       </Link>
     </div>
