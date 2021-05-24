@@ -10,7 +10,7 @@ function App() {
   const [name, setName] = useState("");
   const [temp, setTemp] = useState();
   const [conditions, setConditions] = useState("");
-  const [path, setPath] = useState("/weather");
+  const [path, setPath] = useState("/");
   const [className, setClassName] = useState("");
 
   // Fetch Weather Information
@@ -37,11 +37,9 @@ function App() {
       if(temp < 10) setClassName('cold-wrapper') 
       if(temp >= 20 && temp < 30) setClassName('perfect-wrapper')
       if(temp > 30) setClassName('hot-wrapper')  
-
-      console.log('once')
     };
     fetchData();
-  }, [city, className]);
+  }, [city]);
 
   return (
     <Router>
@@ -51,10 +49,10 @@ function App() {
           exact
           render={() => <HeroPage searchCity={(city) => setCity(city)} /> }
         />
-      ) : <Redirect to='/weather' /> }
+      ) : <Redirect to="/weather" /> }
 
       <Route
-        path={path}
+        path='/weather'
         exact
         render={() => (
           <WeatherPage
@@ -62,7 +60,6 @@ function App() {
             location={name}
             temperature={temp}
             conditions={conditions}
-            // homePath={(path) => setPath(path)}
           />
         )}
       />
