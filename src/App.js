@@ -30,13 +30,13 @@ function App() {
       setTemp(temp);
       setConditions(conditions);
 
-      if (conditions.toLowerCase().includes('rain')) {
+      if (conditions.toLowerCase().includes("rain")) {
         setClassName("rain-wrapper");
       }
 
-      if(temp < 10) setClassName('cold-wrapper') 
-      if(temp >= 20 && temp < 30) setClassName('perfect-wrapper')
-      if(temp > 30) setClassName('hot-wrapper')  
+      if (temp < 10) setClassName("cold-wrapper");
+      if (temp >= 20 && temp < 30) setClassName("perfect-wrapper");
+      if (temp > 30) setClassName("hot-wrapper");
     };
     fetchData();
   }, [city]);
@@ -47,12 +47,14 @@ function App() {
         <Route
           path="/"
           exact
-          render={() => <HeroPage searchCity={(city) => setCity(city)} /> }
+          render={() => <HeroPage searchCity={(city) => setCity(city)} />}
         />
-      ) : <Redirect to="/weather" /> }
+      ) : (
+        <Redirect to="/weather" />
+      )}
 
       <Route
-        path='/weather'
+        path="/weather"
         exact
         render={() => (
           <WeatherPage
@@ -60,6 +62,7 @@ function App() {
             location={name}
             temperature={temp}
             conditions={conditions}
+            homePath={(city) => setCity(city)}
           />
         )}
       />

@@ -3,9 +3,18 @@ import "./../styles/Cold.scss";
 import "./../styles/Rain.scss";
 import "./../styles/Perfect.scss";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import WeatherInformation from "./WeatherInformation";
 
-const WeatherPage = ({ className, location, temperature, conditions }) => {
+const WeatherPage = ({
+  className,
+  location,
+  temperature,
+  conditions,
+  homePath,
+}) => {
+  const [path, setPath] = useState("Melbourne");
+
   return (
     <div className={className}>
       <WeatherInformation
@@ -13,7 +22,9 @@ const WeatherPage = ({ className, location, temperature, conditions }) => {
         temperature={temperature}
         conditions={conditions}
       />
-      <Link to="/" >Back</Link>
+      <Link to="/" onClick={() => homePath(path)}>
+        Back
+      </Link>
     </div>
   );
 };
