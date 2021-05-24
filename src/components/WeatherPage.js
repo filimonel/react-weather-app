@@ -1,6 +1,7 @@
 import "./../styles/weatherClasses.scss";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { FaBeer } from "react-icons/fa";
 import WeatherInformation from "./WeatherInformation";
 
 const WeatherPage = ({
@@ -20,7 +21,7 @@ const WeatherPage = ({
         conditions={conditions}
       />
       <Link className="back-button" to="/" onClick={() => homePath(path)}>
-        Back
+        <FaBeer />
       </Link>
     </div>
   );
