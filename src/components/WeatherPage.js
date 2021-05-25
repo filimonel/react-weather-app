@@ -10,7 +10,7 @@ const WeatherPage = ({
   conditions,
   homePath,
 }) => {
-  const [path] = useState("Melbourne");
+  const [path, setPath] = useState("Melbourne");
 
   return (
     <div className={className}>
@@ -19,9 +19,11 @@ const WeatherPage = ({
         temperature={temperature}
         conditions={conditions}
       />
-      <Link className="back-button" to="/" onClick={() => homePath(path)}>
-        Back
+      <div className="back-btn-wrapper">
+      <Link className="back-btn" to="/" onClick={() => homePath(path)}>
+        Home
       </Link>
+      </div>
     </div>
   );
 };
