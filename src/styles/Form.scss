@@ -38,8 +38,8 @@ input[type="search"] {
   flex-basis: 500px;
 }
 
-@media (min-width: 320px) {
+@media (max-width: 320px) {
   .flex-form {
-    width: 304px;
+    width: 298px;
   }
 }
