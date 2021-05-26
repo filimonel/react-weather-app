@@ -3,6 +3,11 @@
   width: 100%;
   background-image: url("./images/hot-desert.jpg");
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  text-shadow: 2px 2px 5px #ff860d;
 }
 
 .cold-wrapper {
@@ -10,6 +15,11 @@
   width: 100%;
   background-image: url("./images/cold-snow.jpg");
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  text-shadow: 2px 2px 5px #feb6c2;
 }
 
 .perfect-wrapper {
@@ -21,6 +31,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+  text-shadow: 2px 2px 5px #94dbd7;
 }
 
 .rain-wrapper {
@@ -28,6 +39,11 @@
   width: 100%;
   background-image: url("./images/rain.jpg");
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  text-shadow: 2px 2px 5px #7e86b3;
 }
 
 .back-btn-wrapper {

@@ -30,13 +30,13 @@ function App() {
       setTemp(temp);
       setConditions(conditions);
 
-      if (conditions.toLowerCase().includes("rain")) {
-        setClassName("rain-wrapper");
-      }
-
       if (temp < 10) setClassName("cold-wrapper");
       if (temp >= 20 && temp < 30) setClassName("perfect-wrapper");
       if (temp > 30) setClassName("hot-wrapper");
+
+      if (conditions.toLowerCase().includes("rain")) {
+        setClassName("rain-wrapper");
+      }
     };
     fetchData();
   }, [city]);
