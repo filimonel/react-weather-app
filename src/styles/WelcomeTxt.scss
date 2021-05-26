@@ -11,3 +11,9 @@
     font-weight: 500;
   }
 }
+
+@media (min-width: 320px) {
+  .welcome-text {
+    width: 40%;
+  }
+}

@@ -50,10 +50,9 @@
 }
 
 .back-btn-wrapper:hover {
-  transform: scale(1.1);
+  transform: scale(1);
   transition: 0.5s ease-in;
   background-color: aliceblue;
-  color: teal;
   .back-btn {
     text-decoration: none;
     padding: 5px 10px;

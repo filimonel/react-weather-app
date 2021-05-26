@@ -37,3 +37,9 @@
 input[type="search"] {
   flex-basis: 500px;
 }
+
+@media (min-width: 320px) {
+  .flex-form {
+    width: 304px;
+  }
+}

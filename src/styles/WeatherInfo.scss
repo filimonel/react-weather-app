@@ -1,11 +1,40 @@
 .weather-info-wrapper {
-  overflow-wrap: break-word;
-  width: 300px; 
+  overflow-wrap: break-word; 
   position: absolute;
-  top: 200px;
+  top: 100px;
   h2 {
     color: white;
     font-weight: 500;
     font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 320px) {
+  .weather-info-wrapper {
+    width: 60%;
+  }
+}
+
+@media (min-width: 375px) {
+  .weather-info-wrapper {
+    width: 80%;
+  }
+}
+
+@media (min-width: 425px) {
+  .weather-info-wrapper {
+    width: 80%;
+  }
+}
+
+@media (min-width: 768px) {
+  .weather-info-wrapper {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .weather-info-wrapper {
+    width: 80%;
   }
 }
