@@ -1,4 +1,4 @@
-import "./../styles/weatherClasses.scss";
+import "../styles/weatherClasses.scss";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import WeatherInformation from "./WeatherInformation";

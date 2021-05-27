@@ -1,4 +1,4 @@
-import "./../styles/WeatherInfo.scss";
+import "../styles/WeatherInfo.scss";
 
 const WeatherInformation = ({ location, temperature, conditions }) => {
   return (

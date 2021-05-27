@@ -1,6 +1,6 @@
-import "./../styles/HeroPage.scss";
-import "./../styles/WelcomeTxt.scss";
-import "./../styles/Form.scss";
+import "../styles/HeroPage.scss";
+import "../styles/WelcomeTxt.scss";
+import "../styles/Form.scss";
 import { useState } from "react";
 
 const HeroPage = ({ searchCity }) => {
