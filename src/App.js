@@ -6,7 +6,7 @@ import env from "react-dotenv";
 
 function App() {
   // State
-  const [city, setCity] = useState("Melbourne");
+  const [city, setCity] = useState("Mesa");
   const [name, setName] = useState("");
   const [temp, setTemp] = useState();
   const [conditions, setConditions] = useState("");
@@ -43,7 +43,7 @@ function App() {
 
   return (
     <Router>
-      {city === "Melbourne" ? (
+      {city === "Mesa" ? (
         <Route
           path="/"
           exact
