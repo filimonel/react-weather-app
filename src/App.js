@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import HeroPage from "./components/HeroPage";
+import owk from "./owk";
 import WeatherPage from "./components/WeatherPage";
 import env from "react-dotenv";
 
@@ -17,7 +18,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetch(
-        `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${env.API_KEY}&units=metric`
+        `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${owk}&units=metric`
       );
       const result = await res.json();
 
