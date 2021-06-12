@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import HeroPage from "./components/HeroPage";
 import owk from "./owk";
 import WeatherPage from "./components/WeatherPage";
-import env from "react-dotenv";
 
 function App() {
   // State
@@ -11,7 +10,6 @@ function App() {
   const [name, setName] = useState("");
   const [temp, setTemp] = useState();
   const [conditions, setConditions] = useState("");
-  const [path, setPath] = useState("/");
   const [className, setClassName] = useState("");
 
   // Fetch Weather Information

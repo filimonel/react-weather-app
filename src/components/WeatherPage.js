@@ -10,7 +10,7 @@ const WeatherPage = ({
   conditions,
   homePath,
 }) => {
-  const [path, setPath] = useState("Mesa");
+  const [path] = useState("Mesa");
 
   return (
     <div className={className}>
